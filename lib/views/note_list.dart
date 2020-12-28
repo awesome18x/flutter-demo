@@ -68,9 +68,17 @@ class NoteList extends StatelessWidget {
                 context: context,
                 builder: (_) => NoteDelete()
               );
-              print(result);
+              print('Hello from DUYNV  $result');
               return result;
             },
+            background: Container(
+              color: Colors.red,
+              padding: EdgeInsets.only(left: 16.0),
+              child: Align(
+                child: Icon(Icons.delete, color: Colors.white),
+                alignment: Alignment.centerLeft,
+              ),
+            ),
             child: ListTile(
               title: Text(
                 notes[index].noteTitle,
